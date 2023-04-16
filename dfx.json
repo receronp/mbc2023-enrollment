@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "mbc_enrollment_backend": {
+      "main": "src/mbc_enrollment_backend/main.mo",
+      "type": "motoko"
+    },
+    "mbc_enrollment_frontend": {
+      "dependencies": [
+        "mbc_enrollment_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/mbc_enrollment_frontend/src/index.html"
+      },
+      "source": [
+        "src/mbc_enrollment_frontend/assets",
+        "dist/mbc_enrollment_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
